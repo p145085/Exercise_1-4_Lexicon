@@ -66,17 +66,17 @@
             double speed = Convert.ToDouble(Console.ReadLine());
             double speedLimit = 70;
             double transgression = speed - speedLimit;
+            double perFiveOver = transgression % 5;
 
             if (speed <= speedLimit)
             {
                 Console.WriteLine("OK.");
             } else if (speed > speedLimit)
             {
-                double perFiveOver = transgression % 5;
                 Console.WriteLine("Your transgression value is " + perFiveOver);
             }
 
-            if (transgression >= 12)
+            if (perFiveOver >= 12)
             {
                 Console.WriteLine("License suspended.");
             }
