@@ -63,10 +63,10 @@
             //If the number of failurepoints is above 12, the program should display License Suspended.
 
             Console.WriteLine("Enter your speed (in km/h).");
-            double speed = Convert.ToDouble(Console.ReadLine());
-            double speedLimit = 70;
-            double transgression = speed - speedLimit;
-            double perFiveOver = transgression % 5;
+            int speed = Convert.ToInt32(Console.ReadLine());
+            int speedLimit = 70;
+            int transgression = speed - speedLimit;
+            int perFiveOver = transgression / 5;
 
             if (speed <= speedLimit)
             {
